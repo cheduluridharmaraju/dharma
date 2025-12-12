@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web developer</title>
+
+    <style>
+        h2{
+            color:black;
+        }
+        h3{
+            color:whitesmoke;
+        }
+
+        strong{
+            color:palevioletred;
+        }
+        h1{
+            color:olivedrab;
+        }
+    </style>
+</head>
+<body style="background-color:linen">
+
+    
+    <a id="top"></a>
+
+    <nav style="margin-bottom: 20px;margin-top: 30px;">
+        <a href="#H&p" style="border-style: solid;border-radius: 5px; margin-right: 20px;background-color:deepskyblue;color: black;">Headings & Paragraphs</a>
+        <a href="#formate" style="border-style: solid;border-radius: 5px; margin-right: 20px;background-color:dimgrey;color: black;">Text Formatting</a>
+        <a href="#links" style="border-style: solid;border-radius: 5px; margin-right: 20px;background-color:bisque;color: black;">LINKS</a>
+        <a href="#images" style="border-style: solid;border-radius: 5px; margin-right: 20px;background-color:greenyellow;color: black;">Image</a>
+        <a href="#V&a" style="border-style: solid;border-radius: 5px; margin-right: 20px;background-color:gold;color: black;">video&audi0</a>
+        <a href="#List" style="border-style: solid;border-radius: 5px; margin-right: 20px;background-color:lightpink;color: black;">Lists(UL,LI,OL)</a>
+    </nav>
+    <hr>
+    <!----> Heading&paragraphs -->
+    <a id="H&p"></a>
+    <div style="background-color:yellowgreen;text-align: center;">
+        <h1>Headings & Paragraphs</h1>
+        <p style="font-size: larger;">how to learn headings and paragraphs Create in HTML</p>
+    </div>
+    <h2>HTML Headings</h2>
+    <p>HTML headings are defined with the <strong>&lt;h1 &gt;</strong> to <strong> &lt;h6&gt; </strong> tags.<br> <strong>&lt;h1&gt;</strong> is the most important heading, and<strong>&lt; h6 &gt;</strong>is the least important.</p>
+    <h2>HTML Paragraphs</h2>
+    <p>HTML paragraphs are defined with the &lt;p&gt; and &lt;/p&gt; tags.</p>
+    <h2>Paragraph Formatting</h2>
+    <p>Browsers automatically add some space (margin) before and after each paragraph.</p>
+    <h3>Breaking Lines</h3>
+    <p>Use the &lt;br&gt; tag to insert a line break (c:</p>
+    <h3>Horizontal Rules</h3>
+    <p>The &lt;hr&gt; tag creates a horizontal rule (thematic break):</p><br>
+    <p><a href="#top" style="color:black;border-style:solid;border-radius: 5px; background-color: blue; ">Back to Top ↑</a></p>
+
+    <!-- Learn how to format text in HTML Session -->
+    <a id="formate"></a> 
+    <div style="text-align: center;background-color: dimgrey;">
+        <h1>Text Formatting</h1>
+        <p style="font-size: larger;">Learn how to format text in HTML</p>
+    </div>
+    <h2>HTML Text Formatting Elements</h2>
+    <p>HTML provides several elements to format text and make it more visually appealing or semantically meaningful.</p>
+    <h2>Basic Text Formatting</h2>
+    <h3>Bold Text</h3>
+    Use &lt;b&gt; for bold text without semantic importance or &lt;strong&gt; for text of great importance:<br>
+    <strong>Example:-</strong> <b>this text is bolded by using &lt;b&gt; tag</b>
+    <h3>Italic Text</h3>
+    Use &lt;i&gt; for italic text without semantic importance or &lt;em&gt; for emphasized text:<br>
+    <strong>Example:-</strong><i>This entir senternse is makes to italis using the &lt;i&gt; tag</i>
+    <h3>Underlined and Marked Text</h3>
+    Use &lt;u&gt; for underlined text or &lt;mark&gt; to highlight text:<br>
+    <strong>Example:-</strong> <u>This ebtire sentense is underlined by using &lt;u&gt; tag</u> &nbsp;and <mark>this sentense is mrked by using &lt;mark&gt;</mark>
+    <h2>Other Text Formatting Elements</h2>
+    <h3>Small Text</h3>
+    Use &lt;small&gt; for side-comments and small print:<br>
+    <strong>Example:-</strong> <small>This Entire Sentense size is decresed by using &lt;small&gt; tag </small>
+    <h3>Deleted and Inserted Text</h3>
+    Use &lt;del&gt; for deleted text or &lt;ins&gt; for inserted text:<br>
+    <strong>Example:-</strong> <del>this sentense deleted by using &lt;del&gt; tag</del> &nbsp; and <ins>This line is inserted by using &lt;ins&gt; tag</ins>
+    <h3>Subscript and Superscript</h3>
+    Use &lt;sub&gt; for subscript and &lt;sup&gt; for superscript<br>
+    <strong>Example for subscript :-</strong>   H<sub>2</sub>O, H<sub>2</sub>SO<sub>4</sub> <br>
+    <strong>Example for superscript:-</strong> (a+b)<sup>2</sup>=a<sup>2</sup>+b<sup>2</sup>+2ab
+
+    <h3>Quotations</h3>
+    Use &lt;q&gt; for short quotations <br>
+    <strong>Example:-</strong> <q>This setes is places inside the quots using &lt;q&gt; </q>
+
+    <h3>Abbreviations</h3>
+    Use &lt;abbr&gt; for abbreviations: <br>
+    <strong>Example :-</strong>  The <abbr title="United Nations Organization">WHO</abbr> was founded in 1945. <br>
+
+    <p><a href="#top" style="color:black;border-style:solid;border-radius: 5px; background-color: blue;">Back to Top ↑</a></p>
+
+    <!-- Links and Anchors -->
+    <a id="links"></a> 
+    <div style="text-align: center;background-color: bisque;">
+        <h1>Links and Anchors</h1>
+        <p style="font-size: larger;">Learn how to create hyperlinks in HTML</p>
+    </div>
+
+    <h2>HTML Links</h2>
+    <p>Links are created using the &lt;a&gt; (anchor) element. The href attribute specifies the destination of the link.</p>
+
+    <h2>Types of Links</h2>
+    <h3>Absolute URLs</h3>
+    Links to external websites with full URLs:<br>
+    <strong>Example:-</strong></> this is a external url 
+    <a href="https://www.google.com">Google</a>
+
+    <h3>Relative URLs</h3>
+    Links to pages within the same website: <br>
+    <strong>Example:-</strong> <a href="#top">back to top</a><br>
+
+    <p><a href="#top" style="color:aliceblue;border-style:solid;border-radius: 5px; background-color:red;">Back to Top ↑</a></p>
+
+
+    <!-- Images -->
+    <a id="images"></a> 
+    <div style="text-align: center; background-color:greenyellow;">
+        <h1>Images</h1>
+        <p style="font-size: larger;">Learn how to add images to your HTML documents</p>
+    </div>
+
+    <h2>HTML Images</h2>
+    Images are defined with the &lt;img&gt; tag. It is an empty tag, containing attributes only, and does not have a closing tag.<br>
+    here i am going to use diggerent methods to uplode image by using width and height attributes as well
+
+    <h2>Image Sources</h2>
+    <h3>Local Images</h3>
+    here the images are used in the web page should be there in the same folder where the web page file is present <br>
+
+    <h3>External Images</h3>
+    Here the images whichare used in the web page is taken form some another externam website<br>
+    <strong>Example</strong> <br>
+    <img src="c:\Users\sanju\OneDrive\Pictures\1727957163000_(1)[1].jpg" style="width: 100px;height: 100px;"  alt="External image"> <br>
+    now i am using styling for the same image<br>
+    <img src="c:\Users\sanju\OneDrive\Pictures\1727957163000_(1)[1].jpg" style="border-radius: 10px;" alt="External image"> <br>
+    nowi am using the another image as a link to ipen anothe website <br>
+    <a href="https://www.whatapp.com/" target="_blank"> <img src=c:"c:\Users\sanju\OneDrive\Pictures\Screenshots\Screenshot 2025-11-06 124210.png" style="width: 100px; height: 100px;" alt="whatapplogo"> </a><br>
+
+    <p><a href="#top" style="color:black;border-style:solid;border-radius: 5px; background-color: blue;">Back to Top ↑</a></p>
+
+    
+    <!-- Video & audio -->
+    <a id="V&a"></a> 
+    <div style="text-align: center;background-color: gold;">
+        <h1>Audio and Video</h1>
+        <p style="font-size: larger;">Learn how to embed audio and video content in HTML</p>
+    </div>
+
+    <h2>Audio</h2>
+    Here in this Session i am going to add both audio files <br>
+    <audio controls> <source src="Amarendra Baahubali Bgm.mp3" type="audio/mpeg"></audio><br>
+    
+
+    <h2>Video</h2>
+    Here in this Session i am going to add both audio files <br>
+    <video width="300" height="250" controls> <source src="movie.mp4" type="video/mp4"> </video><br>
+
+
+    <p><a href="#top" style="color:black;border-style:solid;border-radius: 5px; background-color:red;">Back to Top ↑</a></p>
+
+
+
+    <!-- List -->
+    <a id="List"></a> 
+    <div style="background-color: lightpink;text-align: center;">
+        <h1>Lists</h1>
+        <p style="font-size: larger;">how to create different types of lists in HTML</p>
+    </div>
+    <h2>HTML Lists</h2>
+    HTML provides three types of lists:<br>
+
+    <h2>Unordered Lists</h2>
+    Unordered lists are created with the &lt;ul&gt; tag, and list items with &lt;li&gt;:<br>
+    <strong>Example</strong><br>
+    <ul>
+        <li>List1</li>
+        <li>list2</li>
+        <li>list3</li>
+    </ul>
+    <h2>Ordered List</h2>
+    Ordered lists are created with the &lt;ol&gt; tag, and list items with &lt;li&gt;:<br>
+    <strong>Example</strong><br>
+
+    <ol>
+        <li>List1</li>
+        <li>list2</li>
+        <li>list3</li>
+    </ol>
+
+    <ol type="A">
+        <li>List1</li>
+        <li>list2</li>
+        <li>list3</li>
+    </ol>
+    <ol type="i">
+        <li>List1</li>
+        <li>list2</li>
+        <li>list3</li>
+    </ol>
+
+    <h2>Definition Lists</h2>
+     &lt;dl&gt; tag, terms with &lt;dt&gt; &lt;dd&gt;: <br>
+    <dl> 
+        <dt>cricket</dt> <dd>It is a sports</dd> 
+        <dt>vivo</dt> <dd>It is a moblie</dd>
+        <dt>bus</dt> <dd>It is road vehicle</dd> 
+        <dt>tiger</dt> <dd>It is a animal</dd>
+    </dl>
+
+    <h2>Nested Lists</h2>
+    It is  creating list inside list <br>
+    <strong>Example</strong><br>
+
+    <ul>
+        <li> Fruits
+            <ol>
+                <li>apple</li>
+                <li>kiwi</li>
+                <li>watermelon</li>
+            </ol>
+        </li>
+        <li>moblie
+            <ol type="a">
+                <li>oppo</li>
+                <li>vivo</li>
+                <li>iphone</li>
+            </ol>
+        </li>
+    </ul>
+
+
+    <p><a href="#top" style="color:black;border-style:solid;border-radius: 5px; background-color: wheat;">Back to Top ↑</a></p>  
+
+
+
+
+    <hr>
+    <footer style="color: gray; text-align: center;">
+        <p>Created by <b>santhosh</b> | @ 5/11/2025 Simple HTML Example</p>
+    </footer>
+
+
+    
+</body>
+</html>
