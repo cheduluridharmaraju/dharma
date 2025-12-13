@@ -31,29 +31,29 @@
     <button onclick="updatepage()">Click to Update Page</button>
 
     <script>
-        // Selecting Elements
+        
         const title = document.getElementById("title");
         const infoText = document.getElementsByClassName("info");
         const paragraphs = document.getElementsByTagName("p");
 
-        // Function updatepage() — Called by button click (NO window.updatepage)
+        
         function updatepage() {
 
-            // Change Full Background
+            
             document.body.style.backgroundColor = "lightpink";
 
-            // Update ID element
+            
             title.textContent = "DOM Manipulation Successful!";
             title.style.color = "blue";
             title.style.fontSize = "30px";
             title.style.backgroundColor = "white";
 
-            // Update Class elements
+            
             infoText[0].textContent = "Updated using getElementsByClassName()!";
             infoText[0].style.color = "black";
             infoText[1].style.color = "green";
 
-            // Update Tag Name element
+            
             paragraphs[0].classList.add("highlight");
         }
     </script>
