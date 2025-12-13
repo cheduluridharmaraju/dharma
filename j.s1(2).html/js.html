@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Dashboard</title>
+    <style>
+       
+        :root {
+              --primary-color:purple;
+            --secondary-color: red;
+            --background-color: #f3f4f6;
+        }
+            
+            
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            
+            min-height: 100vh;
+        }
+
+       
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+       
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .profile-card {
+            background-color: var(--card-bg);
+            width: 100%;
+            max-width: 400px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        
+       
+        .card-header {
+            height: 100px;
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            position: relative;
+        }
+
+        .avatar {
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            border-radius: 50%;
+            border: 4px solid white;
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .card-body {
+            padding: 3rem 2rem 2rem; 
+            text-align: center;
+        }
+       
+
+        .user-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .user-role {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        
+        .details-list {
+            text-align: left;
+            margin-bottom: 2rem;
+            border-top: 1px solid #e5e7eb;
+            padding-top: 1rem;
+        }
+
+        .detail-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .detail-item:last-child {
+            border-bottom: none;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        .detail-value {
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+       
+        .controls {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition:0.2s;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: #eef2ff;
+        }
+
+        
+        footer {
+            text-align: center;
+            padding: 1rem;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <header>
+        <h1>JS Object Dashboard</h1>
+    </header>
+
+    
+    <main>
+       
+        <div class="profile-card">
+          
+            <div class="card-header">
+                <div class="avatar">👤</div>
+            </div>
+
+          
+            <div class="card-body">
+
+               
+                <h2 class="user-name" id="display-name">Loading...</h2>
+                <p class="user-role">Member Profile</p>
+
+              
+                <div class="details-list">
+                    <div class="detail-item">
+                        <span class="detail-label">City</span>
+                        <span class="detail-value" id="display-city">Loading...</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Date of Birth</span>
+                        <span class="detail-value" id="display-dob">Loading...</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Phone</span>
+                        <span class="detail-value" id="display-phone">Loading...</span>
+                    </div>
+                </div>
+
+               
+                <div class="controls">
+                    <button class="btn-primary" onclick="updateNameStatic()">
+                        Change Name to "Santhosh"
+                    </button>
+                    <button class="btn-outline" onclick="promptForName()">
+                        Enter Custom Name
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+   
+
+    
+    <script>
+        
+        const userProfile = {
+            name: "balaji.G",
+            city: "Hyderabad",
+            dob: "2002-05-28",
+            phoneNumber: "8008454125"
+        };
+
+        function renderProfile() {
+            
+            document.getElementById('display-name').textContent = userProfile.name;
+            document.getElementById('display-city').textContent = userProfile.city;
+            document.getElementById('display-dob').textContent = userProfile.dob;
+            document.getElementById('display-phone').textContent = userProfile.phoneNumber;
+            
+            console.log("View updated with:", userProfile);
+        }
+
+       
+        function updateNameStatic() {
+            
+            userProfile.name = "Santhosh";
+            
+           
+            renderProfile();
+            
+          
+            alert("Name updated to Santhosh!");
+        }
+
+        function promptForName() {
+            const newName = prompt("Please enter the new name:", userProfile.name);
+            
+            if (newName && newName.trim() !== "") {
+                userProfile.name = newName;
+                renderProfile();
+            }
+        }
+
+        renderProfile();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+body{
+  margin: 0;
+
+  background: linear-gradient(to right, #03a5cd, #d01313);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.main {
+  background: rgba(228, 207, 207, 0.492);
+  width: 80%;
+  max-width: 900px;
+  padding: 30px;
+  border-radius: 12px;
+  
+}
+
+.title {
+  text-align: center;
+  color: rgb(139, 0, 25);
+ 
+}
+
+
+.selectors {
+  margin-top: 10px;
+  background-color:rgb(21, 182, 163);
+  padding: 10px;
+  border-radius: 10px;
+}
+.Class {
+  color: rgb(174, 11, 160);
+  font-weight: bold;
+}
+#unique {
+  color: green;
+  font-style: italic;
+}
+
+
+.colors {
+  margin-top: 20px;
+}
+#blue {
+  width: 150px;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  margin: 10px 0;
+  border-radius: 6px;
+  background-color: rgb(47, 0, 255);
+}
+#rgb{
+  width: 150px;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  margin: 10px 0;
+  border-radius: 6px;
+  background-color: rgb(0, 200, 100);
+}
+#hex {
+  width: 150px;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  margin: 10px 0;
+  border-radius: 6px;
+  background-color: #6A5ACD; 
+  }
+
+
+.backgrounds {
+  margin-top: 20px;
+}
+
+.solid {
+  padding: 15px;
+  margin: 10px 0;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  background-color: rgb(6, 6, 6);
+}
+.gradient {
+  padding: 15px;
+  margin: 10px 0;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  background: linear-gradient(to right, rgb(190, 183, 183), rgb(126, 25, 176));
+}
+.image {
+  padding: 15px;
+  margin: 10px 0;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+ background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhQk8R5j0_NazbF0KkD7CkooQodlbgy5Apfw&s');
+
+  background-position: center;
+}
+#transperent{
+  border: solid rgba(9, 215, 57, 0.253);
+  padding: 15px;
+  margin: 10px 0;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  background-color: transparent
+
+}
+
+
+.borders {
+  margin-top: 20px;
+}
+.dotted{
+  width: 200px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px 0;
+  border: 3px dotted red;
+}
+.dashed {
+  width: 200px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px 0;
+  border: 3px dashed rgb(17, 255, 0);
+}
+.double {
+  width: 200px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px 0;
+  border: 5px double rgb(128, 0, 0);
+}
+.rounded {
+  width: 200px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px 0;
+  border: 3px solid rgb(22, 2, 22);
+  border-radius: 15px;
+}

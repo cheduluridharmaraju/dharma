@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Array Concepts</title>
+</head>
+<body>
+    <h1>JavaScript Array Concepts Demo</h1>
+
+    <button onclick="showArray()">Show Array</button>
+    <button onclick="addElement()">Add Element</button>
+    <button onclick="removeLast()">Remove Last Element</button>
+    <button onclick="searchElement()">Search Element</button>
+    <button onclick="sortArray()">Sort Array</button>
+
+    <h3>Array Output:</h3>
+    <pre id="output"></pre>
+
+    <script>
+        // Initial array
+        let students= ["sanju", "balaji", "ravi", "mohan"];
+
+        // Function to display array
+        function showArray() {
+            document.getElementById("output").textContent = 
+                "Current Array: " + JSON.stringify(students, null, 2);
+        }
+
+        // Function to add an element
+        function addElement() {
+            let newstudents = prompt("Enter a students to add:");
+            if (newstudents && newstudents.trim() !== "") {
+                students.push(newstudents.trim());
+                alert(students + " added!");
+                showArray();
+            } else {
+                alert("Invalid input!");
+            }
+        }
+
+        // Function to remove last element
+        function removeLast() {
+            if (students.length > 0) {
+                let removed = students.pop();
+                alert(removed + " removed!");
+                showArray();
+            } else {
+                alert("Array is empty!");
+            }
+        }
+
+        // Function to search for an element
+        function searchElement() {
+            let search = prompt("Enter students to search:");
+            if (search && search.trim() !== "") {
+                let index = students.indexOf(search.trim());
+                if (index !== -1) {
+                    alert(search + " found at position " + index);
+                } else {
+                    alert(search + " not found!");
+                }
+            } else {
+                alert("Invalid input!");
+            }
+        }
+
+        // Function to sort array
+        function sortArray() {
+            fruits.sort();
+            alert("Array sorted!");
+            showArray();
+        }
+
+        // Show initial array on page load
+        window.onload = showArray;
+    </script>
+</body>
+</html>
