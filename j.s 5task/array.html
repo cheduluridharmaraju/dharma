@@ -17,16 +17,16 @@
     <pre id="output"></pre>
 
     <script>
-        // Initial array
+        
         let students= ["sanju", "balaji", "ravi", "mohan"];
 
-        // Function to display array
+        
         function showArray() {
             document.getElementById("output").textContent = 
                 "Current Array: " + JSON.stringify(students, null, 2);
         }
 
-        // Function to add an element
+    
         function addElement() {
             let newstudents = prompt("Enter a students to add:");
             if (newstudents && newstudents.trim() !== "") {
@@ -38,7 +38,7 @@
             }
         }
 
-        // Function to remove last element
+        
         function removeLast() {
             if (students.length > 0) {
                 let removed = students.pop();
@@ -49,7 +49,7 @@
             }
         }
 
-        // Function to search for an element
+        
         function searchElement() {
             let search = prompt("Enter students to search:");
             if (search && search.trim() !== "") {
@@ -64,7 +64,7 @@
             }
         }
 
-        // Function to sort array
+        
         function sortArray() {
             fruits.sort();
             alert("Array sorted!");
