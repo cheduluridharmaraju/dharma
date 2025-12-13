@@ -64,7 +64,7 @@ function findLargest() {
     const n3 = document.getElementById("num3").value.trim();
     const output = document.getElementById("output");
 
-    // Validate inputs
+    
     if (n1 === "" || n2 === "" || n3 === "") {
         output.innerHTML = "<span class='error'>Please enter all three numbers.</span>";
         return;
@@ -74,12 +74,12 @@ function findLargest() {
         return;
     }
 
-    // Convert to numbers
+    
     const num1 = parseFloat(n1);
     const num2 = parseFloat(n2);
     const num3 = parseFloat(n3);
 
-    // Find largest
+
     const largest = Math.max(num1, num2, num3);
 
     output.innerHTML = `The largest number is: <strong>${largest}</strong>`;
